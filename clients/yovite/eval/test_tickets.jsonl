@@ -1,0 +1,20 @@
+{"id":1,"name":"Expired-basic","input":{"ticket":{"subject":"Gutschein abgelaufen","body":"Mein Gutschein ist abgelaufen. Was kann ich tun?","anrede":"Frau Müller"},"voucher":{"status":"expired"}},"expect_policy":"EXPIRED_NOT_REDEEMABLE"}
+{"id":2,"name":"Expired-no-anrede","input":{"ticket":{"subject":"Mein Gutschein ist abgelaufen","body":"Bitte um Info"},"voucher":{"status":"expired"}},"expect_policy":"EXPIRED_NOT_REDEEMABLE"}
+{"id":3,"name":"Ask-cash","input":{"ticket":{"subject":"Auszahlung?","body":"Kann ich mir den Gutschein bar auszahlen lassen?"}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"} 
+{"id":4,"name":"Direct-restaurant","input":{"ticket":{"subject":"Einlösen","body":"Ich möchte den Gutschein direkt im Restaurant einlösen."}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":5,"name":"Missing-code","input":{"ticket":{"subject":"Wo ist der Code?","body":"Ich habe keinen Code oder PIN."}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":6,"name":"Fallback-details","input":{"ticket":{"subject":"Frage","body":"Ich brauche Hilfe."}},"expect_policy":"ASK_FOR_DETAILS_ONCE"}
+{"id":7,"name":"Expired-with-issue-date","input":{"ticket":{"subject":"Ablauf","body":"Gutschein abgelaufen."},"voucher":{"status":"expired","issue_date":"2021-04-02"}},"expect_policy":"EXPIRED_NOT_REDEEMABLE"}
+{"id":8,"name":"Redeem-online-phrase","input":{"ticket":{"subject":"Einlösen","body":"Wie löse ich online ein?"}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":9,"name":"Plain-question","input":{"ticket":{"subject":"Hilfe","body":"Was ist mit meinem Gutschein?"}},"expect_policy":"ASK_FOR_DETAILS_ONCE"}
+{"id":10,"name":"Expired-keyword-only","input":{"ticket":{"subject":"Ablauf","body":"abgelaufen"},"voucher":{}},"expect_policy":"EXPIRED_NOT_REDEEMABLE"}
+{"id":11,"name":"Direct-restaurant-2","input":{"ticket":{"subject":"Vor Ort","body":"Kann ich vor Ort einlösen?"}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":12,"name":"No-code-but-pin-word","input":{"ticket":{"subject":"PIN?","body":"Ich habe keine PIN."}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":13,"name":"No-code-or-pin","input":{"ticket":{"subject":"CODE?","body":"Kein Code vorhanden."}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":14,"name":"Empty-body","input":{"ticket":{"subject":"?","body":""}},"expect_policy":"ASK_FOR_DETAILS_ONCE"}
+{"id":15,"name":"Neutral","input":{"ticket":{"subject":"Thema","body":"Nur eine allgemeine Frage."}},"expect_policy":"ASK_FOR_DETAILS_ONCE"}
+{"id":16,"name":"Expired-formal","input":{"ticket":{"subject":"Gültigkeit","body":"Der Gutschein ist abgelaufen."},"voucher":{"status":"expired"}},"expect_policy":"EXPIRED_NOT_REDEEMABLE"}
+{"id":17,"name":"Redeem-wording","input":{"ticket":{"subject":"Restaurant","body":"Kann das Restaurant den Gutschein direkt einlösen?"}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":18,"name":"No-pin-wording","input":{"ticket":{"subject":"Angaben fehlen","body":"Ich habe keinen Code und keine PIN."}},"expect_policy":"INSTRUCT_REDEEM_ONLINE"}
+{"id":19,"name":"Generic-help","input":{"ticket":{"subject":"Bitte um Hilfe","body":"Danke."}},"expect_policy":"ASK_FOR_DETAILS_ONCE"}
+{"id":20,"name":"Expired+ask-cash","input":{"ticket":{"subject":"Gutschein abgelaufen","body":"Kann ich Geld zurück bekommen?"},"voucher":{"status":"expired"}},"expect_policy":"EXPIRED_NOT_REDEEMABLE"}

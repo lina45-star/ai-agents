@@ -1,0 +1,15 @@
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.save
+
+# env & secrets
+.env
+
+# client logs/secrets
+clients/*/logs/**
+clients/*/secrets/**
+
